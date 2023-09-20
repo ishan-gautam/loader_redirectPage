@@ -1,0 +1,91 @@
+ body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000000cf;
+            opacity: 1;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 350;
+            font-size: 14px;
+        }
+
+        .rectangular-box {
+            width: 250px;
+            height: 175px;
+            background-color: white;
+            opacity: 1;
+            border: 1px solid #ddd; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            display: flex;
+            justify-content: center;
+            align-items:flex-start;
+            z-index: 999;
+            text-align: center;
+        }
+
+        .child {
+            display: inline-block;
+
+        }
+
+        .loader{
+            position: relative;
+            background: conic-gradient(transparent,#014280);
+            border-radius: 50%;
+   			border-width:300px;
+            width: 45px;
+            height: 45px;
+            animation: load 2s linear infinite;
+            margin-left: 100px;
+            margin-top: 40px;
+        }
+        .loader::before{
+            content: '';
+            position: absolute;
+            width: 75%;
+            height: 75%;
+            border-radius: 50%;
+            background-color: #ffffff;
+            margin-inline: -16.8px;
+            margin-top: 5.8px;
+        }
+        @keyframes load {
+            100%
+            {
+                transform: rotate(360deg);
+            }
+            
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 200px;
+        }
+
+        .box1 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 147.5px;
+            float: left;
+            clear: none;
+            text-align: center;
+            vertical-align: baseline;
+            padding-left: 47px;
+        }
+
+        .A{
+            padding-left: 32px;
+            justify-content: end;
+            font-size: 12px;
+        }
+
+        .img{
+            margin-top: 5px;
+        }
